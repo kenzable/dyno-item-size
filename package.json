@@ -1,5 +1,5 @@
 {
-  "name": "dyno-item-size",
+  "name": "@kenzable/dyno-item-size",
   "version": "0.3.0",
   "description": "compute the size of an item the same way dynamodb does",
   "main": "index.js",
