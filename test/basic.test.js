@@ -14,10 +14,19 @@ describe('should report back item size', function() {
     var size = dynoItemSize(item);
     if (size !== items.string.size) throw new Error(`Expected ${items.string.size} but got ${size}`);
   });
-  
+
   it('for an item with number values', function() {
     var item = {
         number: items.number.content
+    };
+    var size = dynoItemSize(item);
+    if (size !== items.number.size) throw new Error(`Expected ${items.number.size} but got ${size}`);
+  });
+
+  it('for an item with undefined values', function() {
+    var item = {
+        number: items.number.content,
+        someUndefinedValue: undefined
     };
     var size = dynoItemSize(item);
     if (size !== items.number.size) throw new Error(`Expected ${items.number.size} but got ${size}`);
